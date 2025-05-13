@@ -32,7 +32,7 @@ mkdir -p $OUTPUT_DIR
 #Generate a random number
 #Determine first how many files to create
 
-Num_files=$((random % 6 + 5))
+Num_files=$((RANDOM % 6 + 5))
 
 for ((i=1; i<=Num_files; i++)); do
 
@@ -40,12 +40,10 @@ for ((i=1; i<=Num_files; i++)); do
 filename="$OUTPUT_DIR/${FILE_NAME_PREFIX}_$i.txt"
 
 #Generate random data and write it to file
-dd if=/dev/urandom of="$filename" bs=1024 count=$((random % 1024 + 1)) 2>/dev/null
+dd if=/dev/urandom of="$filename" bs=1024 count=$((RANDOM % 1024 + 1)) 2>/dev/null
 
 done
 
 tree $OUTPUT_DIR
 
 aws s3 sync $OUTPUT_DIR s3://$BUCKET_NAME
-
-
