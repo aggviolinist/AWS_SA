@@ -14,7 +14,7 @@ fi
 BUCKET_NAME=$1
 #Check for file name
 if [ -z "$2" ]; then
-   echo "There need to be a file name prefix. e.g ./bucket my-new-filename-prefix"
+   echo "There need to be a file name prefix. e.g ./filename my-new-filename-prefix"
    exit 1
 fi
 
