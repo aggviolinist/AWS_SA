@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+echo "syncing in progress...."
+
+#Where we'll store those files
+OUTPUT_DIR="/tmp/s3-bash-scripts"
+
+#Create output folder
+mkdir -p $OUTPUT_DIR
+
+#Generate a random number
+#Determine first how many files to create
+
+Num_files=$((random % 6 + 5))
+
+for ((i=1; i<=Num_files; i++)); do
+   #Generate a random file name
+random_filename=
+
+
