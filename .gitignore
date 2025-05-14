@@ -6,6 +6,9 @@
 # logs
 *.log
 
+#Binary file
+.terraform.lock.hcl
+
 # Directories
 .terraform/
 .vagrant/
