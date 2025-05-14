@@ -1,0 +1,10 @@
+AWSTemplateFormatVersion: "2010-09-09" # Found in CFN docs
+Description: A simple S3 bucket
+Resources:
+# How to create a bucket using cfn
+# https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-s3-bucket.html
+  S3Bucket:
+      Type: 'AWS::S3::Bucket'
+# We dont need to provide a bucket name as AWS will automatically provide one for us 
+
+
