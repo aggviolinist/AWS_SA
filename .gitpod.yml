@@ -2,9 +2,7 @@ tasks:
 # Terraform tool
   - name: Terraform
     before: |
-      wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
-      echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
-      sudo apt update && sudo apt install terraform
+      ./bin/terraform_cli_install.sh
 
 # CDK install
   - name: cdk
@@ -21,11 +19,6 @@ tasks:
     env:
       AWS_CLI_AUTO_PROMPT: on-partial
     before: |
-      cd /workspace
-      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-      unzip awscliv2.zip
-      sudo ./aws/install
-      cd $THEIA_WORKSPACE_ROOT
-      # msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
-      #msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi /qn
+       ./bin/aws_cli_install.sh
+      
 
