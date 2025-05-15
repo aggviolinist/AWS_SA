@@ -7,6 +7,10 @@ terraform {
   }
 }
 
+provider "aws" {
+  # Configuration options
+}
+
 resource "aws_s3_bucket" "my-favourite-bucko" {
 }
 
