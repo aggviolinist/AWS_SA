@@ -1,4 +1,6 @@
 {
+"_comment": "This policy grants cannonical user Dave full access in the s3 buckets of kev.",
+
     "Grants":[
         {
             "Grantee":{

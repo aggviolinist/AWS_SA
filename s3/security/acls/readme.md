@@ -29,11 +29,11 @@ aws s3api list-buckets --query="Owner.ID" --output="text"
 aws s3api put-bucket-acl --bucket="bucko-policies" --access-control-policy="file://policy.json"
 ```
 
-## Create file
+## On the other hand, Create file
 ```sh
 touch policy.txt
-aws s3 cp policy.txt s3://bucko-policy
-aws s3 ls s3://bucko-policy
+aws s3 cp policy.txt s3://bucko-policies
+aws s3 ls s3://bucko-policies
 ```
 
 ## Clean up
@@ -41,3 +41,4 @@ aws s3 ls s3://bucko-policy
 aws s3 rm s3://bucko-policies/policy.txt
 aws s3 rb s3://bucko-policies
 ```
+

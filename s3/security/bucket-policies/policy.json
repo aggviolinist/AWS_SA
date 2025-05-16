@@ -1,0 +1,21 @@
+{
+    "_comment": "This policy grants kev access to list, get, and put objects in the bucko-policies bucket.",
+
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::123456789:user/kev" 
+            },
+            "Action": [
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:PutObject"
+            ],
+            "Resources": [
+                "arn:aws:s3::bucko-policies",
+                "arn:aws:s3::bucko-policies/*"
+            ]
+        }
+    ]
+}
