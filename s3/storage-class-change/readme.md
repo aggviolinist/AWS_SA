@@ -9,4 +9,4 @@ aws s3 cp plan.txt s3://change-daro
 
 ## Change class
 aws s3api put-object --bucket="change-daro" --key="plan.txt" --storage-class="STANDARD_IA" 
-aws s3 cp plan.txt s3://change-daro --storage="STANDARD"
+aws s3 cp plan.txt s3://change-daro --storage STANDARD
