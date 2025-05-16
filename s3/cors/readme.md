@@ -60,5 +60,11 @@ aws s3api put-bucket-website --bucket="hosting-sampo" --website-configuration="f
 ```sh
 aws s3 cp hello.js s3://hosting-sampo
 ```
+## Create API gateway with mock response and then test the endpoint
+API end point: https://515stxyiy0.execute-api.us-east-1.amazonaws.com/Prod
+curl -X POST -H "Content-Type: application/json" https://515stxyiy0.execute-api.us-east-1.amazonaws.com/Prod/hello
 
-## Apply a CORS policy
+## Apply a CORS policy on our bucket
+```sh
+aws s3api put-bucket-cors --bucket="hosting-sampo" --cors-configuration="file://cors.json"
+```

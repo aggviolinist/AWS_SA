@@ -18,5 +18,18 @@
         <h1>Welcome to My Website</h1>  
         <p>What do you think of my amazing Website!</p>
     </main>
+    <script type="text/javascript">
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "https://515stxyiy0.execute-api.us-east-1.amazonaws.com/Prod/hello", true);
+      // Send the proper header information along with the request
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onreadystatechange = () => {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+          const results = JSON.parse(xhr.responseText);
+          console.log('results',results)
+        }
+      };
+      xhr.send();
+    </script>
   </body>
 </html>
