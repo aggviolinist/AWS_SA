@@ -29,7 +29,7 @@ aws s3api list-buckets --query="Owner.ID" --output="text"
 aws s3api put-bucket-acl --bucket="bucko-policies" --access-control-policy="file://policy.json"
 ```
 
-## On the other hand, Create file
+## On the other hand as the Grantee, Create file
 ```sh
 touch policy.txt
 aws s3 cp policy.txt s3://bucko-policies
