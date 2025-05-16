@@ -68,3 +68,11 @@ curl -X POST -H "Content-Type: application/json" https://515stxyiy0.execute-api.
 ```sh
 aws s3api put-bucket-cors --bucket="hosting-sampo" --cors-configuration="file://cors.json"
 ```
+## Clean up
+```sh
+aws s3 rm s3://cors-samplezzz/index.html
+aws s3 rb s3://cors-samplezzz
+
+aws s3 rm s3://hosting-sampo/hello.js
+aws s3 rb s3://hosting-sampo
+```
