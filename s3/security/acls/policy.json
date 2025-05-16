@@ -1,0 +1,16 @@
+{
+    "Grants":[
+        {
+            "Grantee":{
+                "DisplayName":"Dave",
+                "ID":"abc//cannonical id",
+                "Type":"CannonicalUser"
+            },
+            "Permission":"FULL_CONTROL"
+        }
+    ],
+    "Owner":{
+        "DisplayName":"Kev",
+        "ID":"def//cannonical id"
+    }
+}
