@@ -9,7 +9,7 @@ aws s3 cp hello.txt s3://enkryption
 ```
 # Put object with encryption of ss3-kms
 ```sh
-aws s3api put-object --bucket="enkryption" --key="hello.txt" --body="hello.txt" --server-side-encryption "aws:kms" --ssekms-key-id "91dc6c8b-f166-4242-97ae-ea9b1c7af65a"
+aws s3api put-object --bucket="enkryption" --key="hello.txt" --body="hello.txt" --server-side-encryption "aws:kms" --ssekms-key-id "abcd"
 ```
 Note: we got the kms id from AWS KMS managed key
 
