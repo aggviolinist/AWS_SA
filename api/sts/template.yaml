@@ -1,9 +1,9 @@
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: 2010-09-09
 Description: Create a role for us to assume and create a resource we'll have access t
 Parameters:
   BucketName:
     Type: String
-    Default: "sts-fun-ab-63463"
+    Default: "sts-fun-bucko"
 Resources:
   S3Bucket:
     Type: 'AWS::S3::Bucket'
