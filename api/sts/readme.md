@@ -27,4 +27,12 @@ aws s3 ls --profile sts
 
 ## Create a role using Cloud Formation
 We need to create a role that will access a new resource
+```sh
+chmod u+x bin/deploy
+./bin/deploy
+```
 ## Use new credentials to assume role
+```sh
+aws sts assume-role --role-arn arn:aws:iam::365897511972:role/my-sts-stacky-stackzz-StsRole-YZJJp5AC8wqG --role-session-name s3-sts-sesh --profile sts
+```
+

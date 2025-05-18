@@ -35,4 +35,4 @@ Resources:
                   !Sub "arn:aws:s3:::${BucketName}",
                   !Sub "arn:aws:s3:::${BucketName}/*"
                 ]
-                
+                # we want this user with no rights at all to create a bucket 

@@ -1,0 +1,4 @@
+{
+    "_comment": "This policy grants the sts-machine-user a role to be able to assume role"
+
+}
