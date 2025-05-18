@@ -1,9 +1,9 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: Create a role for us to assume and create a resource we'll have access t
+Description: Create a role for us to assume and create a resource we'll have access to
 Parameters:
   BucketName:
     Type: String
-    Default: "sts-fun-bucko"
+    Default: "sts-fun-buckoooo"
 Resources:
   S3Bucket:
     Type: 'AWS::S3::Bucket'
@@ -17,7 +17,7 @@ Resources:
         Statement:
           - Effect: Allow
             Principal: 
-              AWS: "arn:aws:iam::982383527471:user/sts-machine-user"
+              AWS: "arn:aws:iam::365897511972:user/sts-machine-user"
               #Service:
               #  - s3.amazonaws.com
             Action:
