@@ -23,7 +23,7 @@ Checks to confirm sts has no access to s3
 ```sh
 aws s3 ls --profile sts 
 ```
- > An error occurred (AccessDenied) when calling the ListBuckets operation: User: arn:aws:iam::365897511972:user/sts-machine-user is not authorized to perform: s3:ListAllMyBuckets because no identity-based policy allows the s3:ListAllMyBuckets action 
+ > An error occurred (AccessDenied) when calling the ListBuckets operation: User: arn:aws:iam::12345678:user/sts-machine-user is not authorized to perform: s3:ListAllMyBuckets because no identity-based policy allows the s3:ListAllMyBuckets action 
 
 ## Create a role for the user using Cloud Formation
 We need to create a role that will access a new resource
