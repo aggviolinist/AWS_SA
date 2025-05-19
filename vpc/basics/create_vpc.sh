@@ -24,7 +24,12 @@ echo "SUBNET_ID:$SUBNET_ID"
 ROUTE_TABLE_ID=$(aws ec2 describe-route-tables --filters "Name=vpc-id,Values=$VPC_ID" "Name=association.main,Values=true" --query "RouteTables[].RouteTableId[]" --output text)
 echo "ROUTE_TABLE_ID:$ROUTE_TABLE_ID"
 
+# Auto Assign IPV4 to make it public
+aws ec2 modify-subnet-attribute --subnet-id $SUBNET_ID --map-public-ip-on-launch
+
 # Explicitly associate subnet
 aws ec2 associate-route-table --route-table-id $ROUTE_TABLE_ID --subnet-id $SUBNET_ID
 
 # Add a route for our Route tou our Internet Gateway 
+aws ec2 create-route --route-table-id $ROUTE_TABLE_ID --destination-cidr-block 0.0.0.0/0 --gateway-id $IGW_ID
+
