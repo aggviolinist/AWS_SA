@@ -2,4 +2,4 @@
 ```sh
 ./create_vpc.sh
 ```
-![Alt text](/images/ssgitlab.png?raw=true "Optional The VPC I created")
+![Alt text](/images/ssgitlab.png?raw=true "The VPC I created")

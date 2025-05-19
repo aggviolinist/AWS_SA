@@ -8,7 +8,6 @@ echo "VPC_ID:$VPC_ID"
 # Turn on DNS Hostnames
 aws ec2 modify-vpc-attribute --vpc-id $VPC_ID --enable-dns-hostnames "{\"Value\": true}"
 
-
 # Create Internet Gateway
 IGW_ID=$(aws ec2 create-internet-gateway --tag-specifications 'ResourceType=internet-gateway,Tags=[{Key=Name,Value=my-custom-IGW}]' --query 'InternetGateway.InternetGatewayId' --output text)
 echo "IGW_ID:$IGW_ID" 
@@ -28,8 +27,11 @@ echo "ROUTE_TABLE_ID:$ROUTE_TABLE_ID"
 aws ec2 modify-subnet-attribute --subnet-id $SUBNET_ID --map-public-ip-on-launch
 
 # Explicitly associate subnet
-aws ec2 associate-route-table --route-table-id $ROUTE_TABLE_ID --subnet-id $SUBNET_ID
+ASSOCIATE_ID=$(aws ec2 associate-route-table --route-table-id $ROUTE_TABLE_ID --subnet-id $SUBNET_ID --query AssociationId --output text)
+echo $"ASSOCIATE_ID:$ASSOCIATE_ID"
 
-# Add a route for our Route tou our Internet Gateway 
+# Add a route for our Route to our Internet Gateway 
 aws ec2 create-route --route-table-id $ROUTE_TABLE_ID --destination-cidr-block 0.0.0.0/0 --gateway-id $IGW_ID
 
+# print the delete command we want to run
+echo "./delete.sh $VPC_ID $IGW_ID $SUBNET_ID $ASSOCIATE_ID $ROUTE_TABLE_ID"
