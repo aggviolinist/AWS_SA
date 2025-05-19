@@ -5,6 +5,8 @@ VPC_ID=$(aws ec2 create-vpc --cidr-block "172.1.0.0/16" --tag-specifications 'Re
 echo "VPC_Id: $VPC_ID"
 
 # Create Internet Gateway
+IGW_ID=$(aws ec2 create-internet-gateway --query InternetGateway.InternetGatewayId --output text)
+echo "IGW: $IGW_ID" 
 
 # Attach Internet Gateway
 
