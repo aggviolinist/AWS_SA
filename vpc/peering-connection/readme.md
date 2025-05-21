@@ -17,3 +17,6 @@ aws ec2 create-route --route-table rtb-of-vpc-a --destination-cidr-block ip-addr
 ```sh
 aws ec2 create-route --route-table rtb-of-vpc-b --destination-cidr-block ip-address-of-a --vpc-peering-conection pcx-peeringid
 ```
+
+## Troubleshooting
+If you encounter an error consider creating an EC2 inastance and just copy the AMI Id to the above template

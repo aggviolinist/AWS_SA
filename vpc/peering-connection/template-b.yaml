@@ -9,7 +9,7 @@ Parameters:
     Default: vpc-0869391a533c17db7
   ImageId:
     Type: String
-    Default: ami-003c24b59bb839e19
+    Default: ami-EC2
   SubnetId:
     Type: String
     Default: subnet-056c9f1a1f06da0b0
@@ -17,7 +17,6 @@ Resources:
   MyEC2Instance: 
     Type: AWS::EC2::Instance
     Properties: 
-      IamInstanceProfile: !Ref EC2InstanceProfile
       InstanceType: !Ref InstanceType
       ImageId: !Ref ImageId
       NetworkInterfaces:

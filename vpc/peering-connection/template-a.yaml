@@ -9,7 +9,7 @@ Parameters:
     Default: vpc-08dabd40d6b5e71e6
   ImageId:
     Type: String
-    Default: ami-003c24b59bb839e19
+    Default: ami-EC2
   SubnetId:
     Type: String
     Default: subnet-0a0c5a1c71756d79d
