@@ -1,44 +1,44 @@
 Resources:
   MyUser:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-user.html#aws-resource-iam-user-return-values
     Type: AWS::IAM::User
     Properties:
-       UserName: 'my-cool-username'
-       ManagedPolicyArns:
-         - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
-    Policies:
-      - PolicyName: MyCoolDopePolicy
-        PolicyDocument: 
-         Version: 2012-10-07
-         Statement: 
-             - Sid: IamListAccess
-               Effect: Allow
-               Action: 
-               - 'iam:ListRoles'
-               - 'iam:ListUsers'
-               Resource: '*'
-  
+      UserName: 'my-cool-user'
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
+      Policies:
+        - PolicyName: MyCoolPolicy
+          PolicyDocument:
+            Version: 2012-10-17
+            Statement:
+                - Sid: IamListAccess
+                  Effect: Allow
+                  Action:
+                  - 'iam:ListRoles'
+                  - 'iam:ListUsers'
+                  Resource: '*'
   MyInlinePolicy:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-user.html#cfn-iam-user-policies
     Type: 'AWS::IAM::Policy'
     Properties:
       PolicyName: MyInlinePolicy
-      PolicyDocument: 
+      PolicyDocument:
         Version: "2012-10-17"
-        Statement: 
+        Statement:
           - Effect: Allow
             Action: 'ec2:*'
             Resource: '*'
       Users:
-       - !Ref MyUser 
- 
+        - !Ref MyUser
   MySecondInlinePolicy:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iam-userpolicy.html
     Type: 'AWS::IAM::UserPolicy'
     Properties:
       PolicyName: MySecondInlinePolicy
       UserName: !Ref MyUser
       PolicyDocument:
         Version: "2012-10-17"
-        Statement: 
+        Statement:
           - Effect: Allow
             Action: 's3:*'
             Resource: '*'
-  
