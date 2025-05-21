@@ -1,0 +1,7 @@
+Version: "2012-10-17"
+Statement: 
+  - Sid: "Accesstos3"
+    Effect: "Allow"
+    Action: "s3:*"
+    Resource: "*"
+# Yaml or json dont take spacesin sid
