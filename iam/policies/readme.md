@@ -21,3 +21,10 @@ yq -o json policy.yaml > policy.json
 aws iam create-policy --policy-name my-fun-policy --policy-document file://policy.json
 ```
 
+## On our bash script, we first create policy versions (this didn't work) 
+
+## Attach policy to IAM Cool user
+```sh
+aws iam attach-user-policy --policy-arn arn:aws:iam::365897511972:policy/my-fun-policyyy --user-name my-cool-user 
+```
+

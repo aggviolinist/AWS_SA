@@ -4,4 +4,4 @@ Statement:
     Effect: "Allow"
     Action: "s3:*"
     Resource: "*"
-# Yaml or json dont take spacesin sid
+# Yaml or json dont take spaces in sid
