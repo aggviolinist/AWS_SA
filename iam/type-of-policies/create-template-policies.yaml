@@ -1,43 +1,44 @@
 Resources:
   MyUser:
-   Type: AWS::IAM::User
-   Properties:
-    Username: 'my-cool-username'
-    ManagedPolicyArns:
-      - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
+    Type: AWS::IAM::User
+    Properties:
+       UserName: 'my-cool-username'
+       ManagedPolicyArns:
+         - arn:aws:iam::aws:policy/job-function/ViewOnlyAccess
     Policies:
       - PolicyName: MyCoolDopePolicy
         PolicyDocument: 
          Version: 2012-10-07
          Statement: 
-           - Sid: IamListAccess
-             Effect: Allow
-             Action: 
-              - 'iam:ListRoles'
-              - 'iam:ListUsers'
-             Resource: '*'
+             - Sid: IamListAccess
+               Effect: Allow
+               Action: 
+               - 'iam:ListRoles'
+               - 'iam:ListUsers'
+               Resource: '*'
   
   MyInlinePolicy:
-   Type: 'AWS::IAM::Policy'
-   Properties:
-     PolicyName: MyInlinePolicy
-     PolicyDocument: 
-      Version: "2012-10-17"
-      Statement: 
-       - Effect: Allow
-         Action: 'ec2:*'
-         Resources: '*'
+    Type: 'AWS::IAM::Policy'
+    Properties:
+      PolicyName: MyInlinePolicy
+      PolicyDocument: 
+        Version: "2012-10-17"
+        Statement: 
+          - Effect: Allow
+            Action: 'ec2:*'
+            Resource: '*'
       Users:
        - !Ref MyUser 
-       
+ 
   MySecondInlinePolicy:
-   Type: 'AWS::IAM::Policy'
-   Properties:
-     PolicyName: MySecondInlinePolicy
-     Username: !Ref MyUser
-     PolicyDocument:
-       Version: "2012-10-17"
-       Statement: 
-        - Effect: Allow
-          Action: 's3:*'
-          Resources: '*'
+    Type: 'AWS::IAM::UserPolicy'
+    Properties:
+      PolicyName: MySecondInlinePolicy
+      UserName: !Ref MyUser
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement: 
+          - Effect: Allow
+            Action: 's3:*'
+            Resource: '*'
+  
