@@ -26,3 +26,5 @@ Its on the main.js file
 ```sh
 npm start
 ```
+## Output of the Appsync from Dynamo DB
+![Alt text](/output-images/appsync.png?raw=true "The data quried")
