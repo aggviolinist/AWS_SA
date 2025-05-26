@@ -1,0 +1,6 @@
+{ 
+    "Artist": {
+            "DataType": "String",
+            "StringValue": "Biggie Smalls"
+        }
+}
