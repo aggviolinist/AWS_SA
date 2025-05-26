@@ -1,3 +1,4 @@
+# Tools
 # AWS SQS
 # CloudFormation
 # Using CLI
@@ -21,3 +22,10 @@ chmod u+x receive.sh
 >![Alt text](/output-images/sqs.png?raw=true "The SQS was able to receive the message")
 
 # Using SDK(ruby)
+## Create a ruby file to send message
+```sh
+bundle init
+bundle install
+bundle exec ruby send.rb
+bundle exec ruby receive.rb
+```
