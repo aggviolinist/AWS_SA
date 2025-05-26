@@ -1,4 +1,8 @@
-# Using Dynamo DB, AppSync && GraphQL
+# Using Dynamo DB, AppSync && GraphQL to query on my CLI
+# Tools & Services
+### GraphQL
+### AppSync
+### Dynamo DB
 ## Create Database and add items
 Do this on the console
 ## Create an APPSync api and use dynamoDB as source

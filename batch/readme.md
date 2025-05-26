@@ -1,4 +1,10 @@
 # Using Batch scheduling in AWS
+# Tools & Services
+### Fargate
+### ECR
+### Python
+### Docker
+### AWS Batch
 ## Create a dockerfile
 Ensure the Docker File is named as such "dockerfile" strictly
 ## Run to create a docker container

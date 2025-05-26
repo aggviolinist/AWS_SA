@@ -44,7 +44,7 @@ chmod u+x
 > We now confirmed that we have our message and it printed
 ## Confrim if the publisher is Lambda
 ![Alt text](/output-images/lambda-image.png?raw=true "We have build using SAM")
-## Cloud Watch to check if meesage got the subscriber
+## Cloud Watch to check if message got the subscriber
 ![Alt text](/output-images/cloudwatch.png?raw=true "The Subscriber message on cloud watch")
 
 

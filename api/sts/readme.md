@@ -1,4 +1,8 @@
 ## Create a user with no permissions
+## Tools & Services
+### AWS IAM
+### AWS STS
+### AWS S3
 We need to create out a new user with no permissions at all and generate out access keys
 ```sh
 aws iam create-user --user-name sts-machine-user
