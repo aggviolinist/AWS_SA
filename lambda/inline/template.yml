@@ -2,7 +2,7 @@ AWSTemplateFormatVersion: "2010-09-09"
 Transform: AWS::Serverless-2016-10-31
 Resources:
   InlineLambda:
-    Type: AWS::Severless::Function
+    Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
       Runtime: python3.13
@@ -10,6 +10,7 @@ Resources:
       InlineCode: | 
         def handler(event, context):
             message = 'Hello {} {}!'.format(event['first_name'],event['last_name'])
+            print("Log this for me on cloud watch")
             return {
             'message':message
             }
