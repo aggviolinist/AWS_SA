@@ -40,4 +40,7 @@ sam build
 ```sh
 ./bin/deploy
 ```
+## Random users generated on lambda
+![Alt text](/output-images/rand.png?raw=true "Users generated on lambda")
+
 

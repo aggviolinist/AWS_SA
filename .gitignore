@@ -48,3 +48,5 @@ operations/variable-scripts/variable.json
 # Appsync 
 appsync
 appsync/*
+
+.samconfig.toml
