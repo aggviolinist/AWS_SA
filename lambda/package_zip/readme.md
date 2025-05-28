@@ -38,3 +38,5 @@ sam build
 ```sh
 ./bin/deploy.sh
 ```
+## Output on Lambda
+> ![Alt text](/output-images/lambdaout.png?raw=true "Output on lambda")
