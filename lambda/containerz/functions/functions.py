@@ -1,13 +1,15 @@
 import json
+from faker import Faker 
 
 def handler(event, context):
-    message = 'Hello {} {}!'.format(event['first_name'],event['last_name'])
+    fake = Faker()
+    message = 'Hello {}!'.format(fake.name())
     info={
-        "Type": "Zip Package",
-        "Version": 1,
+        "Type": "Container Package",
+        "Version": 2,
     }
-    info_json= json.dumps(info)
+    info_json = json.dumps(info)
     print(info_json)    
     return {
-            'message':message
+        'message':message
     }

@@ -4,7 +4,11 @@ Resources:
   InlineLambda:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: functions.handler
-      Runtime: python3.12
-      PackageType: Zip
-      CodeUri: "./functions/"
+     Metadata:
+       DockerContext: ../
+       DockerFile: dockerfile
+     PackagingType: Image
+     Handler: functions.handler
+     Runtime: python3.12
+     PackageType: Zip
+     CodeUri: "./functions/"
