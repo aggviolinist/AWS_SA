@@ -1,4 +1,4 @@
-# This time we will be uploading code to lambda from a folder called functions with our code
+# This time we will be uploading code to lambda from our folder called functions 
 # Tools
 ## Cloudformation
 ## s3
