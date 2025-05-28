@@ -1,12 +1,12 @@
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-
 Resources:
   InlineLambda:
     Type: AWS::Serverless::Function
     Metadata:
-      DockerContext: ./
+      DockerContext: /workspace/AWS_SA/lambda/containerz
       Dockerfile: dockerfile
+      SamResourceId: InlineLambda
     Properties:
       PackageType: Image
-      # No need for Handler or Runtime when using Image
+      ImageUri: inlinelambda:latest

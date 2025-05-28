@@ -5,7 +5,7 @@ set -e
 # because relative path was giving us trouble
 root_path=$(realpath .)
 template_path="${root_path}/template.yml"
-
+function_path="${root_path}/functions"
 # sam build
 # ===================
 # https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-building.html
@@ -15,5 +15,4 @@ template_path="${root_path}/template.yml"
 # .aws-sam/build/template.yml
 echo "SAM build......"
 echo "using template: ${template_path}"
-sam build \
-  --template-file "${template_path}"
+sam build --template-file "${template_path}" --base-dir "${function_path}"

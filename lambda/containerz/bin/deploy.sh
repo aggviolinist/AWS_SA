@@ -3,7 +3,7 @@ set -e
 
 # we need the absolute path because relative path was giving us trouble
 root_path=$(realpath .)
-#config_path="$(realpath ..)/python.toml"
+config_path="$(realpath .)/samconfig.toml"
 
 #if [ ! -f "$config_path" ]; then
 #  echo "$config_path does not exist."
@@ -20,6 +20,6 @@ echo "SAM deploy......"
 
 sam deploy \
   --template-file "./.aws-sam/build/template.yaml" \
-  --stack-name "zip-local-lambda-py" \
-  --capabilities "CAPABILITY_IAM"
-  #--config-file "$config_path" \
+  --stack-name "container-lambda-py" \
+  --capabilities "CAPABILITY_IAM" \
+  --config-file "$config_path" 

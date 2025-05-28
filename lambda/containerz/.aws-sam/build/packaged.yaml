@@ -1,0 +1,12 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  InlineLambda:
+    Type: AWS::Serverless::Function
+    Metadata:
+      DockerContext: /workspace/AWS_SA/lambda/containerz
+      Dockerfile: dockerfile
+      SamResourceId: InlineLambda
+    Properties:
+      PackageType: Image
+      ImageUri: 365897511972.dkr.ecr.us-east-1.amazonaws.com/python-container-sample:inlinelambda-c4cf12ab22ad-latest
