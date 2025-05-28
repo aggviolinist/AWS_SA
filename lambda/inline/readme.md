@@ -1,6 +1,8 @@
+# Upl
 # Tools
 ## Lambda
 ## Serverless Application Model (SAM)
+## CloudFormation
 # Creating a lambda inline function
 ## Create a template file
 template.yml with lambda inline code
