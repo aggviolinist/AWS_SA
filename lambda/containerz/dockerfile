@@ -1,0 +1,11 @@
+# Use AWS python base image
+FROM public.ecr.aws/lambda/python:3.12
+
+# Copy over function specific code
+COPY functions/functions.py functions/requirements.txt /var/task/
+
+# Install requirements
+RUN python3.12 -m pip install -r /var/task/requirements.txt
+
+# Set the file functions.py and the function hander as the lambda function
+CMD [ "functions.handler" ]
