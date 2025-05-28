@@ -1,0 +1,4 @@
+version=0.1
+[default.deploy.parameters]
+s3_bucket = "obako2"
+region = "us-east-1"
