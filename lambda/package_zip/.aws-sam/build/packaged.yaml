@@ -1,4 +1,4 @@
-AWSTemplateFormatVersion: "2010-09-09"
+AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Resources:
   InlineLambda:
@@ -7,4 +7,6 @@ Resources:
       Handler: functions.handler
       Runtime: python3.12
       PackageType: Zip
-      CodeUri: "./functions/"
+      CodeUri: s3://obako2/zip-package-python/cb9fd01d8bd6f8e99c5bf5002645ca1c
+    Metadata:
+      SamResourceId: InlineLambda
