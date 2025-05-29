@@ -44,9 +44,9 @@ rails generate migration create_tables
 ```
 Creates a table
 We made changes to the following files:
-1./db/migrate/20250529101510_create_tables.rb
-2./app/models/thing.rb
-3./config/database.yml
+1. /db/migrate/20250529101510_create_tables.rb
+2. /app/models/thing.rb
+3. /config/database.yml
 
 ## Creating our own database
 ```sh
@@ -68,9 +68,9 @@ rails c
 ![Alt text](/output-images/railsztable.png?raw=true "Tables have been created!!!")
 
 ## Updating the routes to direct to our app
-> /config/routes.rb Change to "application#home"
-> Add def home function to /app/controllers/application_controller.rb
-> Under /app/views/, make /application/home.html.erb
+1.  /config/routes.rb Change to "application#home"
+2.  Add def home function to /app/controllers/application_controller.rb
+3.  Under /app/views/, make /application/home.html.erb
 
 ## The code in div iterates through the DB
 home.html.erb
