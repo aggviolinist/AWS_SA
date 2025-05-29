@@ -34,3 +34,6 @@ env
 ```sh
 less etc/passwd
 ```
+
+# AWS Documentation for CLI commands
+> https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html
