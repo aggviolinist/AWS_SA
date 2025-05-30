@@ -22,9 +22,12 @@ dockerfile
 
 ## Launch a simple EC2 instance using Cloudformation to interact with redis
 template.yaml
+The above Cloud Formation template enables us download redis and utilize it in ec2
 ```sh
 chmod u+x deploy.sh
 ./deploy.sh
 ```
+> The OS is Ubuntu since Amazon linux could download our script
 > ![Alt text](/output-images/ec2ss.png?raw=true "Ec2 was deployed by Cloud formation")
-## 
+## Logging it from SSH 
+> ![Alt text](/output-images/ssh_ec2.png?raw=true "We were able to login to our ec2 instance, and ssh into it.")
