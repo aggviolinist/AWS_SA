@@ -1,21 +1,21 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: Launch a simple EC2 to interact with redis on MemoryDB
+Description: Launch a simple EC2 to interact with redis on ElastiCache
 Parameters:
   InstanceType:
     Type: String
     Default: t3.micro
   VpcId:
     Type: String
-    Default: vpc-0630e4ccdcd788a95
+    Default: vpc-1234
   ImageId:
     Type: String
-    Default: ami-084568db4383264d4
+    Default: ami-0124
   SubnetId:
     Type: String
-    Default: subnet-0905f86a59220b6b5
+    Default: subnet-01345
   SecurityGroupId:
     Type: String
-    Default: sg-0abab817601352b2b
+    Default: sg-0123456
 Resources:
   SSMRole:
     Type: AWS::IAM::Role
