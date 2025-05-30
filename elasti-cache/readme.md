@@ -2,6 +2,8 @@
 # Tools & Services
 ### Elasticache
 ### Redis
+### Cloudformation
+### EC2
 ## Create redis serverless cache
 ```sh
 aws elasticache create-serverless-cache --serverless-cache-name cache245 --engine redis
