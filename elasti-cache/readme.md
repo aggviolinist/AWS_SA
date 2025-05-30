@@ -29,5 +29,9 @@ chmod u+x deploy.sh
 ```
 > The OS is Ubuntu since Amazon linux could download our script
 > ![Alt text](/output-images/ec2ss.png?raw=true "Ec2 was deployed by Cloud formation")
-## Logging it from SSH 
+## Logging in from SSH 
+How do we login in on ubuntu
+```sh
+redis-cli -h cache245.com --tls
+```
 > ![Alt text](/output-images/ssh_ec2.png?raw=true "We were able to login to our ec2 instance, and ssh into it.")
