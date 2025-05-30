@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: "2010-09-09"
-Description: Launch a simple EC2 to interact with redis on ElastiCache
+Description: Launch a simple EC2 to interact with redis on MemoryDB
 Parameters:
   InstanceType:
     Type: String

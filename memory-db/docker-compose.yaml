@@ -1,0 +1,13 @@
+version: '3.8'
+
+services: 
+  redis: 
+    image: redis:7
+    container_name: redis7
+    ports:
+      - "6379:6379" # Default port for docker
+    volumes: 
+      - redis_data:/data
+
+volumes:
+ redis_data:
