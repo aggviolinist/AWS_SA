@@ -1,3 +1,2 @@
-.index-policy.json
-.kendra_role.json
-.data-source-policy.json
+
+*.json
