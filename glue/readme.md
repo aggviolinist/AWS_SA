@@ -8,7 +8,7 @@ aws s3 mb s3://bucko/data
 ```
 ## Download our data from a website
 ```sh
-curl https://catalog.data.gov/dataset/electric-vehicle-population-data -o dataset.csv
+curl https://www.stats.govt.nz/assets/Uploads/Annual-enterprise-survey/Annual-enterprise-survey-2023-financial-year-provisional/Download-data/annual-enterprise-survey-2023-financial-year-provisional.csv -o dataset.csv
 ```
 ## Upload our data to our bucket
 ```sh
