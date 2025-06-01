@@ -3,7 +3,7 @@
 ## Tools & Services
 ### AWS Rekognition
 ### S3
-### Ruby
+### Ruby 
 ## Create an S3 bucket and upload our image
 ```sh
 aws s3 mb s3://bucko
@@ -18,3 +18,21 @@ bundle exec ruby main.rb
 ```
 ## Output
 ![Alt text](/output-images/rekog.png?raw=true "The output shows that our image is 1. A person with 98% confidence, 2. Its a cartoon with 97% confidence")
+
+# Celeberity Detection
+## Tools & Services
+### AWS Rekognition
+### S3
+### Python
+## Upload our image
+```sh
+aws s3 cp nip.jpeg s3://bucko
+```
+## Analysis using python
+```sh
+touch main.py
+pip install boto3
+python main.py
+```
+## Output
+![Alt text](/output-images/nipoutput.png?raw=true "The output shows that indeed our image is Nipsey")
