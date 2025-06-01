@@ -29,7 +29,13 @@ aws iam attach-role-policy --role-name MyGlueServiceRole --policy-arn arn:aws:ia
 ```
 > Attaching the policy to the role
 
+## Create a database
+Use the Console its easier
+
 ## Creating a glue crawler
 ```sh
 aws glue create-crawler --name MyCrawlerBasic --role MyGlueServiceRole --database-name mydatabase --targets '{"S3Targets": [{"Path": "s3://blue/data/"}]}' --classifiers []
 ```
+### Run the crawler
+Via the console
+
