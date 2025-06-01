@@ -31,6 +31,10 @@ aws iam attach-role-policy --role-name MyGlueServiceRole --policy-arn arn:aws:ia
 
 ## Create a database
 Use the Console its easier
+## Create a database
+Use the Console its easier
+> Rememeber the s3 path should be like *s3://bucko/data/* 
+> Don't set path as the csv itself e.g *s3://bucko/data/dataset.csv*
 
 ## Creating a glue crawler
 ```sh
@@ -38,4 +42,5 @@ aws glue create-crawler --name MyCrawlerBasic --role MyGlueServiceRole --databas
 ```
 ### Run the crawler
 Via the console
+
 
