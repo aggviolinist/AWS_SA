@@ -34,6 +34,14 @@ env
 ```sh
 less etc/passwd
 ```
+## How to download stuff from the internet
+```sh
+wget http://apache.org/dist/kafka/kafka_2.3-3.4.5.tgz
+```
+## Unzipping the file
+```sh
+tar -xzf kafka_2.3-3.4.5.tgz
+```
 
 # AWS Documentation for CLI commands
 > https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html
