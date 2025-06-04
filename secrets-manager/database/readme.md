@@ -15,7 +15,7 @@ template.yaml
 >I got an issue on the Postgress DB engine. The article below helped me takle the version problem
 >https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RDS_Fea_Regions_DB-eng.Feature.RDSProxy.html
 >Older versions took a decimal but now its *15*
->Use the VPC's Id and subnet
+>Use the default VPC's Id and subnet
 
 ## Deploy the template
 ```sh
