@@ -1,4 +1,4 @@
-# Upl
+# Uploding ambda using inline
 # Tools
 ## Lambda
 ## Serverless Application Model (SAM)
