@@ -10,9 +10,9 @@ Resources:
         GenerateStringKey: "password"
         PasswordLength: 30
         ExcludeCharacters: '"@/\'
-  # MySecretProvided:
-  #   # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html
-  #   Type: 'AWS::SecretsManager::Secret'
-  #   Properties:
-  #     # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-generatesecretstring.html
-  #     SecretString: "Testing123456!"
+  MySecretProvided:
+    # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secret.html
+    Type: 'AWS::SecretsManager::Secret'
+    Properties:
+      # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-secretsmanager-secret-generatesecretstring.html
+      SecretString: "Testing123456!"

@@ -1,6 +1,5 @@
 # We are going to be using Secrets Manager to;
 # 1. Get Username $ password from AWS Secrets Manager
-# 2. Input our own password to AWS Secrets Manager
 ## Tools & Services
 ### CloudFormation
 ### AWS Secrets Manager
@@ -12,7 +11,7 @@ template.yaml
 ```sh
 ./depoy.sh
 ```
-# 1. Retreving the Username and Password using Python
+# a. Retreving the Username and Password using Python
 ### Import boto3 to use that library
 ```sh
 pip install boto3
@@ -21,7 +20,7 @@ Copy code from cosole
 python main.py
 ```
 >![Alt text](/output-images/sm.png?raw=true "The output as expected")
-# 2. Retreving the Username and Password using Ruby
+# b. Retreving the Username and Password using Ruby
 ### Using ruby
 ```sh
 bunle init
@@ -31,3 +30,9 @@ bundle exec ruby main.rb
 ```
 >![Alt text](/output-images/smrb.png?raw=true "The output as expected")
 # What is different from ruby and python is, for python I needed to import JSON unlike ruby
+# 2. Provide our own password to AWS Secrets Manager
+## Update CloudFormation
+```sh
+template.yaml
+```
+>![Alt text](/output-images/smprov.png?raw=true "The output as expected")

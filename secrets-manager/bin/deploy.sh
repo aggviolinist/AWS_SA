@@ -5,7 +5,7 @@ echo "Deploying Secrets Manager..........."
 
 STACK_NAME="secerets-manager"
 
-root_path=$(realpath ..)
+root_path=$(realpath .)
 template_path="${root_path}/template.yaml"
 
 aws cloudformation deploy \
