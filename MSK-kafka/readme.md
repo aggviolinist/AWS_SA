@@ -1,5 +1,6 @@
 # Follow this strictly
 https://docs.aws.amazon.com/msk/latest/developerguide/serverless-getting-started.html
+> https://github.com/ExamProCo/AWS-Examples/tree/main/kafka
 
 ### Create kafka
 ### Create MSK
