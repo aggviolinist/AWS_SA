@@ -1,2 +1,2 @@
 # AWS_SA
-Code repo to practice as I learn more about the cloud in preparation for the Solutions Architect Certificate
+Code repo to build as I prepare for the AWS Solutions Architect Certificate
