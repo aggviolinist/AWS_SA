@@ -37,16 +37,14 @@ less etc/passwd
 ## How to download stuff from the internet
 ```sh
 wget http://apache.org/dist/kafka/kafka_2.3-3.4.5.tgz
-
-## Editing the creds file on aws
-```sh
-nano ~/.aws/credentials
-```
 ```
 ## Unzipping the file
 ```sh
 tar -xzf kafka_2.3-3.4.5.tgz
 ```
-
+## Editing the creds file on aws
+```sh
+nano ~/.aws/credentials
+```
 # AWS Documentation for CLI commands
 > https://awscli.amazonaws.com/v2/documentation/api/latest/reference/index.html
