@@ -4,6 +4,10 @@
 zip -r package.zip .
 zip -r package.zip sample
 ```
+## Finding a file
+```sh
+find . -name "variable.tf"
+```
 ## Grep to find running rails services
 ```sh
 ps aux | grep rails
