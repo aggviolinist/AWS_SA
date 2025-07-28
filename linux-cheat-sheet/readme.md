@@ -3,6 +3,7 @@
 ```sh
 zip -r package.zip .
 zip -r package.zip sample
+zip -r get.zip ./*
 ```
 ## Finding a file
 ```sh
